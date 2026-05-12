@@ -204,7 +204,7 @@ export default function App() {
     
     // Format timestamp: YYYYMMDD_HHMMSS
     const now = new Date();
-    const timestamp = now.toISOString().replace(/[-:T]/g, '').slice(0, 14);
+    const timestamp = now.toISOString().replace(/[-:]/g, '').replace('T', '').slice(0, 14);
     
     a.download = `${timestamp}_${jobTitle}_prompts.txt`;
     a.click();
